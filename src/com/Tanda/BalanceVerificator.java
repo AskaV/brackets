@@ -3,6 +3,20 @@ package com.Tanda;
 import java.util.List;
 import java.util.Stack;
 
+/** Brackets balance verification
+ *  (aka HackerRank stack problem)
+ *  A bracket is considered to be one of the following characters: (), {}, [].
+ *  Brackets are considered matched pair if it occurs that every open bracket has closing
+ * bracket of the exact the same type (‘(’, ‘{’, ‘[’), ie.
+ * 1. ‘()’, ‘{}’, ‘[]’ - balanced, open and closed brackets exist
+ * 2. ‘(}’ - not balanced, open and closed brackets has different type
+ * 3. ‘((())’ - not balanced, number of open brackets does not equal to the number of
+ * closing ones;
+ *
+ * A matching pair of brackets is not balanced when the set of brackets it encloses are not
+ * matched, ie. ({[(]}) is not balanced because the contents between [ and ] are not balanced.
+ * The pair of square brackets contains a single unbalanced bracket ‘(’ between them.
+ */
 public class BalanceVerificator {
     List<String> listOpen = List.of("(", "{", "[");
     List<String> listClose = List.of(")", "}", "]");
